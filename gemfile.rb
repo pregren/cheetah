@@ -11,4 +11,7 @@ def add_gems
     gem 'binding_of_caller'
   end
   run_bundle
+  
+  git add: '.'
+  git commit: %( -m 'add gemfiles' )
 end

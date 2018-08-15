@@ -16,7 +16,7 @@ def setting_pry!
       Pry.commands.alias_command 'c', 'continue'
     end
   CODE
-end
 
-git add: '.'
-git commit: %( -m 'setting pry' )
+  git add: '.'
+  git commit: %( -m 'setting pry' )
+end
