@@ -18,5 +18,5 @@ def setting_pry!
   CODE
 end
 
-# git add: '.'
-# git commit: %( -m 'setting pry' )
+git add: '.'
+git commit: %( -m 'setting pry' )
