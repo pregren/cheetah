@@ -1,5 +1,7 @@
-require_relative 'gemfile'
-require_relative 'debug/pry'
+setup_path = File.dirname(__FILE__)
+
+require_relative "#{setup_path}/gemfile"
+require_relative "#{setup_path}/debug/pry"
 
 def apply!
   add_gems
