@@ -1,15 +1,18 @@
-setup_path = File.dirname(__FILE__)
+repo = 'https://raw.githubusercontent.com/pregren/cheetah'
+branch = 'master'
 
-require_relative "#{setup_path}/gemfile"
-require_relative "#{setup_path}/debug/pry"
+gemfile_url = "#{repo}/#{branch}/gemfile.rb"
 
-def apply!
-  add_gems
-  debug_apply!
+file_attributes = {
+  debug: %w(pry),
+  service: %w(),
+  spec: %w(),
+}
+
+apply gemfile_url
+
+file_attributes.each do |key, values|
+  values.each do |value|
+    apply "#{repo}/#{branch}/#{key}/#{value}.rb"
+  end
 end
-
-def debug_apply!
-  setting_pry!
-end
-
-apply!
