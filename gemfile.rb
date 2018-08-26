@@ -8,6 +8,8 @@ gem_group :development, :test do
   gem 'awesome_print'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
 run_bundle
 
