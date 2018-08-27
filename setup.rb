@@ -2,6 +2,7 @@ repo = 'https://raw.githubusercontent.com/pregren/cheetah'
 branch = 'master'
 
 gemfile_url = "#{repo}/#{branch}/gemfile.rb"
+rubocop_url = "#{repo}/#{branch}/debug/rubocop.rb"
 
 file_attributes = {
   debug: %w(pry),
@@ -17,3 +18,4 @@ file_attributes.each do |key, values|
   end
 end
 
+apply rubocop_url
